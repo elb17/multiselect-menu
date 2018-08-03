@@ -8,11 +8,10 @@ multiple options at once.
  - May be configured as a drop-up menu
  - Optional "Check All"/"Uncheck All" buttons
 
-You can see the dropdown in action [here](https://elb17.github.io/multiselect-menu/examples/index.html).
 
 ## Usage
 
-See the docs and [example app](https://elb17.github.io/multiselect-menu/examples/index.html) ([source](https://github.com/elb17/multiselect-menu/blob/master/examples/Example.elm)) for more details.
+See the [docs](http://package.elm-lang.org/packages/elb17/multiselect-menu/latest) and [example app](https://elb17.github.io/multiselect-menu/examples/index.html) ([source](https://github.com/elb17/multiselect-menu/blob/master/examples/Example.elm)) for more details.
 
 A simple example (although more configurations may be added):
 
