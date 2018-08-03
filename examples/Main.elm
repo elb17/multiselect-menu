@@ -1,6 +1,6 @@
 module Example exposing (main)
 
-import Html exposing (Html, br, div, h2, span, text)
+import Html exposing (Html, br, div, h2, h4, span, text)
 import Html.Attributes exposing (style)
 import List
 import MultiselectMenu
@@ -116,9 +116,9 @@ view : Model -> Html Msg
 view { dropupItems, dropupState, dropdownState, dropdownItems } =
     div [ style [ ( "margin-left", "50px" ) ] ]
         [ h2 [] [ text "Example Dropdown Menus:" ]
-        , div [ style [ ( "width", "200px" ), ( "display", "inline-block" ), ( "margin", "100px 0px 0px 100px" ) ] ]
+        , div [ style [ ( "width", "200px" ), ( "display", "inline-block" ), ( "margin", "150px 0px 0px 100px" ) ] ]
             [ MultiselectMenu.view dropupConfig dropupState dropupItems ]
-        , div [ style [ ( "width", "150px" ), ( "display", "inline-block" ), ( "margin", "100px 0px 125px 100px" ) ] ]
+        , div [ style [ ( "width", "150px" ), ( "display", "inline-block" ), ( "margin", "150px 0px 125px 100px" ) ] ]
             [ MultiselectMenu.view dropdownConfig dropdownState dropdownItems ]
         , viewDropupItems dropupItems
         , br [] []
@@ -137,8 +137,8 @@ viewDropupItems itemsList =
                     div [] [ text (toString item.name ++ " is not checked") ]
     in
     div []
-        [ text "Dropup items: "
-        , div [] (List.map viewItem itemsList)
+        [ h4 [] [ text "Dropup items: " ]
+        , div [ style [ ( "margin-left", "50px" ) ] ] (List.map viewItem itemsList)
         ]
 
 
@@ -153,8 +153,8 @@ viewDropdownItems itemsList =
                     div [] [ text (name ++ " is not checked") ]
     in
     div []
-        [ text "Dropdown items: "
-        , div [] (List.map viewItem itemsList)
+        [ h4 [] [ text "Dropdown items: " ]
+        , div [ style [ ( "margin-left", "50px" ) ] ] (List.map viewItem itemsList)
         ]
 
 
