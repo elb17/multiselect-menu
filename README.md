@@ -8,7 +8,6 @@ multiple options at once.
  - May be configured as a drop-up menu
  - Optional "Check All"/"Uncheck All" buttons
 
- You can see the dropdown in action here.
 
 ## Usage
 
