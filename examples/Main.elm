@@ -114,11 +114,11 @@ update msg model =
 
 view : Model -> Html Msg
 view { dropupItems, dropupState, dropdownState, dropdownItems } =
-    div []
-        [ h2 [ style [ ( "margin", "50px" ) ] ] [ text "Example Dropdown Menus:" ]
-        , div [ style [ ( "width", "200px" ), ( "display", "inline-block" ), ( "margin", "150px 0px 0px 100px" ) ] ]
+    div [ style [ ( "margin-left", "50px" ) ] ]
+        [ h2 [] [ text "Example Dropdown Menus:" ]
+        , div [ style [ ( "width", "200px" ), ( "display", "inline-block" ), ( "margin", "100px 0px 0px 100px" ) ] ]
             [ MultiselectMenu.view dropupConfig dropupState dropupItems ]
-        , div [ style [ ( "width", "150px" ), ( "display", "inline-block" ), ( "margin", "150px 0px 125px 100px" ) ] ]
+        , div [ style [ ( "width", "150px" ), ( "display", "inline-block" ), ( "margin", "100px 0px 125px 100px" ) ] ]
             [ MultiselectMenu.view dropdownConfig dropdownState dropdownItems ]
         , viewDropupItems dropupItems
         , br [] []
@@ -132,9 +132,9 @@ viewDropupItems itemsList =
         viewItem =
             \item ->
                 if item.isChecked then
-                    div [ style [ ( "margin-left", "50px" ) ] ] [ text (toString item.name ++ " is checked") ]
+                    div [] [ text (toString item.name ++ " is checked") ]
                 else
-                    div [ style [ ( "margin-left", "50px" ) ] ] [ text (toString item.name ++ " is not checked") ]
+                    div [] [ text (toString item.name ++ " is not checked") ]
     in
     div []
         [ text "Dropup items: "
@@ -148,9 +148,9 @@ viewDropdownItems itemsList =
         viewItem =
             \( name, isChecked ) ->
                 if isChecked then
-                    div [ style [ ( "margin-left", "50px" ) ] ] [ text (name ++ " is checked") ]
+                    div [] [ text (name ++ " is checked") ]
                 else
-                    div [ style [ ( "margin-left", "50px" ) ] ] [ text (name ++ " is not checked") ]
+                    div [] [ text (name ++ " is not checked") ]
     in
     div []
         [ text "Dropdown items: "
