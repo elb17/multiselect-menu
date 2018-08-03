@@ -11,7 +11,7 @@ multiple options at once.
 
 ## Usage
 
-See the docs and example app ([source](https://github.com/elb17/multiselect-menu/blob/master/examples/Example.elm)) for more details.
+See the docs and [example app](https://elb17.github.io/multiselect-menu/examples/index.html) ([source](https://github.com/elb17/multiselect-menu/blob/master/examples/Example.elm)) for more details.
 
 A simple example (although more configurations may be added):
 
